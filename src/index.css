@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap");
+@tailwind base;
+body {
+	@apply p-4 bg-slate-900 text-white;
+  font-family: "Ubuntu", sans-serif;
+}
+@tailwind components;
+@tailwind utilities;
