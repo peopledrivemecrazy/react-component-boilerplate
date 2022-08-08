@@ -1,3 +1,4 @@
+import { Accordion } from "../lib/components/Accordion";
 import { Badge } from "../lib/components/Badge";
 import { Button } from "../lib/components/Button";
 
@@ -24,6 +25,24 @@ export const Components = () => {
 			],
 		},
 	];
+	const accordion = {
+		title: "Accordion",
+		Component: Accordion,
+		elements: [
+			{
+				title: "Expanded",
+				text: "Expanded",
+				classes: "",
+				expanded: true,
+			},
+			{
+				title: "Collapsed",
+				text: "Collapsed",
+				classes: "",
+				expanded: false,
+			},
+		],
+	};
 	return (
 		<div className="grid gap-4">
 			{components.map(({ title, Component, elements }, i) => {
@@ -42,6 +61,10 @@ export const Components = () => {
 					</div>
 				);
 			})}
+			<div className="w-96">
+				<p className="text-xl">{accordion.title}</p>
+				<Accordion items={accordion.elements} />
+			</div>
 		</div>
 	);
 };

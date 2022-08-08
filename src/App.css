@@ -4,6 +4,15 @@
 .secondary {
 	@apply bg-blue-500 text-white;
 }
+.accordion {
+	@apply grid gap-4;
+	.accordion-header {
+		@apply bg-sky-500 text-white p-2 rounded cursor-pointer flex justify-between items-center;
+	}
+	.accordion-body {
+		@apply bg-gray-800 border rounded border-gray-300 p-2 transition duration-150 ease-out;
+	}
+}
 .btn {
 	@apply p-4 bg-gray-500 text-white;
 	&-primary {
